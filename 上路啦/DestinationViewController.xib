@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DestinationViewController" customModule="上路啦" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="OJJ-wo-eSZ" id="GyS-0s-YFz"/>
+                <outlet property="searchBar" destination="BWj-do-WB6" id="yPj-lt-NMa"/>
+                <outlet property="searchDisplayController" destination="3zg-LF-1DJ" id="UKg-mc-fh4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLo-6t-hPE">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="搜索目的地" translatesAutoresizingMaskIntoConstraints="NO" id="BWj-do-WB6">
+                            <rect key="frame" x="5" y="25" width="590" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="pGC-iC-VVE"/>
+                            </constraints>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.47058823529999999" green="0.87450980389999999" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="BWj-do-WB6" secondAttribute="trailing" constant="5" id="5Cr-jC-eBv"/>
+                        <constraint firstItem="BWj-do-WB6" firstAttribute="leading" secondItem="zLo-6t-hPE" secondAttribute="leading" constant="5" id="EqO-hl-CNX"/>
+                        <constraint firstAttribute="height" constant="64" id="YS7-o2-dMa"/>
+                        <constraint firstItem="BWj-do-WB6" firstAttribute="top" secondItem="zLo-6t-hPE" secondAttribute="top" constant="25" id="hIk-aC-Kcl"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OJJ-wo-eSZ">
+                    <rect key="frame" x="0.0" y="74" width="600" height="477"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lv5-fO-X4b">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OJJ-wo-eSZ" firstAttribute="top" secondItem="zLo-6t-hPE" secondAttribute="bottom" constant="10" id="0MH-8L-K8a"/>
+                <constraint firstItem="zLo-6t-hPE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="734-lf-SLH"/>
+                <constraint firstItem="OJJ-wo-eSZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9hJ-0S-XTX"/>
+                <constraint firstAttribute="bottom" secondItem="OJJ-wo-eSZ" secondAttribute="bottom" constant="49" id="Jfe-OY-1hn"/>
+                <constraint firstItem="zLo-6t-hPE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bgL-SO-W0L"/>
+                <constraint firstAttribute="trailing" secondItem="zLo-6t-hPE" secondAttribute="trailing" id="sn3-7e-HQW"/>
+                <constraint firstAttribute="trailing" secondItem="OJJ-wo-eSZ" secondAttribute="trailing" id="xAs-8q-SGR"/>
+            </constraints>
+        </view>
+        <searchDisplayController id="3zg-LF-1DJ">
+            <connections>
+                <outlet property="delegate" destination="-1" id="Qrg-Rl-ahW"/>
+                <outlet property="searchContentsController" destination="-1" id="jsH-U2-sHs"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="bRK-6o-WRL"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="yzI-Vh-wDv"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>
